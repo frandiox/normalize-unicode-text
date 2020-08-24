@@ -1,0 +1,62 @@
+{
+  "name": "normalize-unicode-text",
+  "version": "0.0.1",
+  "description": "Normalize strings with diacritics, zero-width whitespaces and other non-latin characters",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.min.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "rimraf dist && rollup -c",
+    "lint": "eslint --ext *.ts,.js --fix ./src/* && prettier --list-different --write \"**/*.{ts,js,json}\"",
+    "prepublishOnly": "yarn lint && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frandiox/normalize-unicode-text.git"
+  },
+  "keywords": [
+    "normalize",
+    "text",
+    "string",
+    "unicode",
+    "diacritics",
+    "zero-width",
+    "latin"
+  ],
+  "author": "Fran Dios <me@frandiox.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frandiox/normalize-unicode-text/issues"
+  },
+  "homepage": "https://github.com/frandiox/normalize-unicode-text#readme",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@typescript-eslint/eslint-plugin": "^3.9.0",
+    "@typescript-eslint/parser": "^3.9.0",
+    "esbuild": "^0.6.25",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-typescript": "^0.14.0",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "jest": "^26.4.2",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.26.3",
+    "rollup-plugin-dts": "^1.4.10",
+    "rollup-plugin-esbuild": "^2.4.2",
+    "ts-jest": "^26.2.0",
+    "typescript": "^4.0.0"
+  }
+}
